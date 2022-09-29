@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Talkable : MonoBehaviour, IInteractable
 {
+    [SerializeField] private List<string> dialoguePages;
+    
     public void Interact()
     {
-        Debug.Log($"{name}: Hi ghostie!");
+        GameManager.Instance.DialogueManager.StartShowDialogue(dialoguePages);
     }
 }

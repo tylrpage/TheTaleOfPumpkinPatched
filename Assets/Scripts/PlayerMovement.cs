@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.DialogueManager.IsCurrentlyTalking)
+        {
+            return;
+        }
+        
         Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         cc.Move(inputDirection * Time.deltaTime * speed);
     }

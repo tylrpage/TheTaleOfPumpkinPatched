@@ -39,7 +39,7 @@ public class Interactor : MonoBehaviour
             }
             
             // Interact if interact key is pressed
-            if (Input.GetKeyDown(KeyCode.E))
+            if (!GameManager.Instance.DialogueManager.IsCurrentlyTalking && Input.GetButtonDown("Interact"))
             {
                 nearestInteractable.Interact();
             }
