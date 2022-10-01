@@ -12,7 +12,7 @@ Shader "Custom/AddWhite"
     }
     SubShader
     {
-        Tags {"Queue" = "Transparent" "RenderType"="Transparent" }
+        Tags {"Queue" = "AlphaTest" "RenderType"="Transparent" }
         LOD 200
 
         CGPROGRAM
