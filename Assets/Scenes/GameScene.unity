@@ -6298,7 +6298,7 @@ GameObject:
   - component: {fileID: 1605479887}
   - component: {fileID: 1605479886}
   m_Layer: 0
-  m_Name: Face
+  m_Name: Blush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
