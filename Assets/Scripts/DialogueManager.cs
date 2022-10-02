@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartShowDialogue(List<string> textPages)
     {
-        IsCurrentlyTalking = true;
+        StartCoroutine(SetTalkingNextFrame());
         dialoguePanel.SetActive(true);
         _textPages = textPages;
         
@@ -64,5 +64,11 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(talkingCooldown);
         IsCurrentlyTalking = false;
+    }
+
+    private IEnumerator SetTalkingNextFrame()
+    {
+        yield return null;
+        IsCurrentlyTalking = true;
     }
 }
