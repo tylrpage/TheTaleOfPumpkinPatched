@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3227518134610005839}
   - component: {fileID: 3227518134610005838}
-  - component: {fileID: 6141476489817216014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CowboyPumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,21 +53,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6141476489817216014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3227518134610005837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePages:
-  - Hey there
-  - you look lost
 --- !u!1 &3227518134838544009
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +65,7 @@ GameObject:
   - component: {fileID: 3227518134838544013}
   - component: {fileID: 3227518134838544012}
   - component: {fileID: 3227518134838544000}
+  - component: {fileID: 287765067313789499}
   m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
@@ -166,3 +151,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &287765067313789499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227518134838544009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePages:
+  - Hey there
+  - you look lost
