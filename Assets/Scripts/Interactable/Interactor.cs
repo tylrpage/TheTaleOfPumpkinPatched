@@ -19,12 +19,12 @@ public class Interactor : MonoBehaviour
         // Update nearest interactable
         int interactableLayerMask = (1 << LayerMask.NameToLayer("Interactable"));
         Collider nearestCollider = FindNearestCollider(interactableLayerMask);
-        IInteractable nearestInteractable = nearestCollider != null ? nearestCollider.GetComponent<IInteractable>() : null;
+        Interactable nearestInteractable = nearestCollider != null ? nearestCollider.GetComponent<Interactable>() : null;
 
         // old interactable is no longer interactable, disable flashing
         if (_recentInteractableCollider != null && _recentInteractableCollider != nearestCollider)
         {
-            _recentInteractableCollider.GetComponent<Renderer>().material.SetFloat(WhiteEnabled, 0);
+            _recentInteractableCollider.GetComponentInChildren<Renderer>().material.SetFloat(WhiteEnabled, 0);
         }
         
         if (nearestInteractable != null)
@@ -33,7 +33,7 @@ public class Interactor : MonoBehaviour
             if (_recentInteractableCollider != nearestCollider)
             {
                 // Enable flashing on the new object
-                Material material = nearestCollider.GetComponent<Renderer>().material;
+                Material material = nearestCollider.GetComponentInChildren<Renderer>().material;
                 material.SetFloat(WhiteEnabled, 1);
                 material.SetFloat(WhitePhaseOffset, Time.timeSinceLevelLoad);
             }
