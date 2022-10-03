@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private float interactRange;
 
     private Collider[] _results = new Collider[MaxColliders];
-    private Collider _recentInteractableCollider;
+    private Interactable _recentInteractable;
     private static readonly int WhitePhaseOffset = Shader.PropertyToID("_WhitePhaseOffset");
 
     // Update is called once per frame
@@ -18,22 +19,21 @@ public class Interactor : MonoBehaviour
     {
         // Update nearest interactable
         int interactableLayerMask = (1 << LayerMask.NameToLayer("Interactable"));
-        Collider nearestCollider = FindNearestCollider(interactableLayerMask);
-        Interactable nearestInteractable = nearestCollider != null ? nearestCollider.GetComponent<Interactable>() : null;
+        Interactable nearestInteractable = FindNearestInteractable(interactableLayerMask);
 
         // old interactable is no longer interactable, disable flashing
-        if (_recentInteractableCollider != null && _recentInteractableCollider != nearestCollider)
+        if (_recentInteractable != null && _recentInteractable != nearestInteractable)
         {
-            _recentInteractableCollider.GetComponentInChildren<Renderer>().material.SetFloat(WhiteEnabled, 0);
+            _recentInteractable.GetComponentInChildren<Renderer>().material.SetFloat(WhiteEnabled, 0);
         }
         
         if (nearestInteractable != null)
         {
             // Nearest interactable has changed
-            if (_recentInteractableCollider != nearestCollider)
+            if (_recentInteractable != nearestInteractable)
             {
                 // Enable flashing on the new object
-                Material material = nearestCollider.GetComponentInChildren<Renderer>().material;
+                Material material = nearestInteractable.GetComponentInChildren<Renderer>().material;
                 material.SetFloat(WhiteEnabled, 1);
                 material.SetFloat(WhitePhaseOffset, Time.timeSinceLevelLoad);
             }
@@ -45,27 +45,67 @@ public class Interactor : MonoBehaviour
             }
         }
         
-        _recentInteractableCollider = nearestCollider;
+        _recentInteractable = nearestInteractable;
     }
 
-    private Collider FindNearestCollider(LayerMask layerMask)
+    private Interactable FindNearestInteractable(LayerMask layerMask)
     {
         var size = Physics.OverlapSphereNonAlloc(transform.position, interactRange, _results, layerMask);
 
-        // Find nearest collider
-        Collider nearestCollider = null;
-        float nearestDistance = float.MaxValue;
+        // Sort by distance
+        Array.Sort(_results, Comparison);
         for (int i = 0; i < size; i++)
         {
             Collider currentCollider = _results[i];
-            float relativeDistance = (currentCollider.transform.position - transform.position).sqrMagnitude;
-            if (relativeDistance < nearestDistance)
+            if (currentCollider == null)
             {
-                nearestDistance = relativeDistance;
-                nearestCollider = currentCollider;
+                continue;
+            }
+            
+            Interactable[] interactables = currentCollider.GetComponents<Interactable>();
+            foreach (var interactable in interactables)
+            {
+                if (interactable.CanInteract())
+                {
+                    return interactable;
+                }
             }
         }
 
-        return nearestCollider;
+        return null;
+    }
+
+    private int Comparison(Collider x, Collider y)
+    {
+        if (x == null && y == null)
+        {
+            return 0;
+        }
+        else if (x == null)
+        {
+            return 1;
+        }
+        else if (y == null)
+        {
+            return -1;
+        }
+        
+        Vector3 position = transform.position;
+        
+        float xRelativeDistance = (x.transform.position - position).sqrMagnitude;
+        float yRelativeDistance = (y.transform.position - position).sqrMagnitude;
+
+        if (xRelativeDistance < yRelativeDistance)
+        {
+            return -1;
+        }
+        else if (xRelativeDistance > yRelativeDistance)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }

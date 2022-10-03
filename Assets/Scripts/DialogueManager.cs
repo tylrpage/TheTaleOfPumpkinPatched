@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     private int _pageIndex;
     private List<string> _textPages;
+    private Action _completeCallback;
 
     private void Awake()
     {
@@ -28,8 +29,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartShowDialogue(List<string> textPages)
+    public void StartShowDialogue(List<string> textPages, Action completeCallback = null)
     {
+        _completeCallback = completeCallback;
         StartCoroutine(SetTalkingNextFrame());
         dialoguePanel.SetActive(true);
         _textPages = textPages;
@@ -50,6 +52,8 @@ public class DialogueManager : MonoBehaviour
         else
         {
             HideDialogue();
+            _completeCallback?.Invoke();
+            _completeCallback = null;
         }
     }
 

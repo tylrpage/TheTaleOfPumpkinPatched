@@ -8,6 +8,6 @@ public class Talkable : Interactable
     
     public override void Interact()
     {
-        GameManager.Instance.DialogueManager.StartShowDialogue(dialoguePages);
+        GameManager.Instance.DialogueManager.StartShowDialogue(dialoguePages, Complete);
     }
 }
