@@ -10,8 +10,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float talkingCooldown;
 
+    // Used to tell other systems if a dialogue is currently being shown
     [NonSerialized] public bool IsCurrentlyTalking;
 
+    // Used to have a cooldown between dialogues ending and new dialogues starting
+    private bool _canStartDialogue;
     private int _pageIndex;
     private List<string> _textPages;
     private Action _completeCallback;
@@ -31,6 +34,12 @@ public class DialogueManager : MonoBehaviour
 
     public void StartShowDialogue(List<string> textPages, Action completeCallback = null)
     {
+        if (!_canStartDialogue)
+        {
+            return;
+        }
+
+        _canStartDialogue = false;
         _completeCallback = completeCallback;
         StartCoroutine(SetTalkingNextFrame());
         dialoguePanel.SetActive(true);
@@ -59,6 +68,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HideDialogue()
     {
+        IsCurrentlyTalking = false;
         _textPages = null;
         dialoguePanel.SetActive(false);
         StartCoroutine(AllowTalkingAfterTime());
@@ -67,7 +77,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator AllowTalkingAfterTime()
     {
         yield return new WaitForSeconds(talkingCooldown);
-        IsCurrentlyTalking = false;
+        _canStartDialogue = true;
     }
 
     private IEnumerator SetTalkingNextFrame()
