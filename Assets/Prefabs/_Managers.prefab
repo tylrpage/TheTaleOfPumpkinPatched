@@ -63,6 +63,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   talkingCooldown: 0.5
+  typingSpeed: 0.03
 --- !u!114 &2237767730890352106
 MonoBehaviour:
   m_ObjectHideFlags: 0
