@@ -5,49 +5,93 @@ using UnityEngine;
 
 public class FlipWithBook : MonoBehaviour
 {
+    [SerializeField] private bool disableFlip;
+    
     private Vector3 _initialPosition;
     private Vector3 _offsetFromPagePivot;
     private Quaternion _initialRotation;
-    private float _flipDownRotation = 80;
+    private BookManager _bookManager;
+    private bool _isLeft;
 
     private void Start()
     {
+        _bookManager = GameManager.Instance.BookManager;
+        _bookManager.RegisterFlipper(this);
+        
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
-        _offsetFromPagePivot = _initialPosition - GameManager.Instance.BookManager.LeftPage.position;
-
+        _offsetFromPagePivot = _initialPosition - _bookManager.LeftPage.position;
         
-        StartCoroutine(FlipUp());
+        _isLeft = _initialPosition.x < GameManager.Instance.BookManager.RightPage.position.x;
+        
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            renderer.enabled = false;
+        }
+    }
+
+    public void StartFlip()
+    {
+        if (!disableFlip)
+        {
+            StartCoroutine(FlipUp());
+        }
+
+        if (!_isLeft)
+        {
+            StartCoroutine(WaitAndShow());
+        }
+        else
+        {
+            foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+            {
+                renderer.enabled = true;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_initialPosition.x < GameManager.Instance.BookManager.RightPage.position.x)
+        Quaternion flipDown = disableFlip ? Quaternion.identity : Quaternion.AngleAxis(_bookManager.FlipRotation, Vector3.right);
+        
+        if (_isLeft)
         {
             // Rotate according to left page
-            Quaternion rot = Quaternion.LookRotation(_initialRotation * Vector3.forward, -GameManager.Instance.BookManager.LeftPage.up);
-            Quaternion flipDown = Quaternion.AngleAxis(_flipDownRotation, Vector3.right);
+            Quaternion rot = Quaternion.LookRotation(_initialRotation * Vector3.forward, -_bookManager.LeftPage.up);
             transform.rotation = rot * flipDown;
-            //transform.rotation *= Quaternion.AngleAxis(90, transform.right);
             
+            // Position
             Quaternion adjustment = Quaternion.Inverse(Quaternion.AngleAxis(180, Vector3.back));
             transform.position = GameManager.Instance.BookManager.LeftPage.position + adjustment *
                 (Quaternion.Inverse(GameManager.Instance.BookManager.LeftPage.localRotation) * _offsetFromPagePivot);
         }
         else
         {
-            transform.rotation = _initialRotation * Quaternion.AngleAxis(_flipDownRotation, Vector3.right);
+            if (!disableFlip)
+            {
+                transform.rotation = _initialRotation * flipDown;
+            }
+        }
+    }
+
+    private IEnumerator WaitAndShow()
+    {
+        yield return new WaitForSeconds(_bookManager.RightVisableDelay);
+            
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            renderer.enabled = true;
         }
     }
 
     private IEnumerator FlipUp()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(_bookManager.FlipDelay);
 
         for (float t = 0; t < 2; t += Time.deltaTime)
         {
-            _flipDownRotation = Mathf.Lerp(80, 0, t);
+            _bookManager.FlipRotation = Mathf.Lerp(80, 0, t);
             yield return null;
         }
     }

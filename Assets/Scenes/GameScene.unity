@@ -1476,6 +1476,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4996967433865332764, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996967433865332764, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996967433865332764, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8712724712399739282, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
       propertyPath: m_Name
       value: Book
@@ -1538,6 +1550,11 @@ Transform:
 --- !u!4 &253007106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4996967433865332764, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
+  m_PrefabInstance: {fileID: 253007104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &253007107 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8712724713021303901, guid: 959d1abb1d343164aa901a2f1e2b97c8, type: 3}
   m_PrefabInstance: {fileID: 253007104}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &268024035
@@ -2315,6 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc88521635570b468373783227ec642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableFlip: 1
 --- !u!4 &418125361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6815266638921753663, guid: df81a7a1747d23541943d76e98956ba6, type: 3}
@@ -4347,6 +4365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc88521635570b468373783227ec642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableFlip: 1
 --- !u!4 &700377724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7078117371875040635, guid: 8a0a774ac7677a54b8c5a3ceafb358f8, type: 3}
@@ -14818,6 +14837,14 @@ PrefabInstance:
       propertyPath: RightPage
       value: 
       objectReference: {fileID: 253007105}
+    - target: {fileID: 6136165787673014085, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: bookAnimator
+      value: 
+      objectReference: {fileID: 253007107}
+    - target: {fileID: 6136165787673014085, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: RightVisableDelay
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
 --- !u!1001 &4955380613430130739

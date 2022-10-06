@@ -92,3 +92,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftPage: {fileID: 0}
   RightPage: {fileID: 0}
+  FlipRotation: 89
+  FlipDelay: 2
