@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2237767730890352105}
   - component: {fileID: 2237767730890352104}
   - component: {fileID: 2237767730890352106}
+  - component: {fileID: 6136165787673014085}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueManager: {fileID: 2237767730890352104}
   FlagManager: {fileID: 2237767730890352106}
+  BookManager: {fileID: 6136165787673014085}
 --- !u!114 &2237767730890352104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,3 +78,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1ff791f29f42328af7fec896b09326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6136165787673014085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237767730890352110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079eec26f585f104a9a7d7782391e0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftPage: {fileID: 0}
+  RightPage: {fileID: 0}
