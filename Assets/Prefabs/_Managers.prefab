@@ -94,3 +94,5 @@ MonoBehaviour:
   RightPage: {fileID: 0}
   FlipRotation: 89
   FlipDelay: 2
+  RightVisableDelay: 0.4
+  bookAnimator: {fileID: 0}
