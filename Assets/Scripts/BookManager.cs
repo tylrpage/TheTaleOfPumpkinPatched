@@ -27,13 +27,4 @@ public class BookManager : MonoBehaviour
             flipper.StartFlip();
         }
     }
-
-    private void Update()
-    {
-        // temp
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            FlipAll();
-        }
-    }
 }

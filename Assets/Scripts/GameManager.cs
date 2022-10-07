@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public DialogueManager DialogueManager;
     public FlagManager FlagManager;
     public BookManager BookManager;
-
+    public IntroManager IntroManager;
+    
     private void Awake()
     {
         if (_instance == null)

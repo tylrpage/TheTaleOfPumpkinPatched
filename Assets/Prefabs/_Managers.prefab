@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2237767730890352104}
   - component: {fileID: 2237767730890352106}
   - component: {fileID: 6136165787673014085}
+  - component: {fileID: 937809260}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   DialogueManager: {fileID: 2237767730890352104}
   FlagManager: {fileID: 2237767730890352106}
   BookManager: {fileID: 6136165787673014085}
+  IntroManager: {fileID: 0}
 --- !u!114 &2237767730890352104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,3 +98,28 @@ MonoBehaviour:
   FlipDelay: 2
   RightVisableDelay: 0.4
   bookAnimator: {fileID: 0}
+--- !u!114 &937809260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237767730890352110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96e1bef7b5ef9d43b2abd062e810020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  leftPageTexts:
+  - The great beyond, where souls go to rest
+  - page 3
+  - page 5
+  rightPageTexts:
+  - But some restless few still linger behind
+  - page 4
+  - page 6
+  leftPage: {fileID: 0}
+  rightPage: {fileID: 0}
+  nextLeftPage: {fileID: 0}
+  nextRightPage: {fileID: 0}
