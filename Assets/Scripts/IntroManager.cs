@@ -13,12 +13,18 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private TMP_Text rightPage;
     [SerializeField] private TMP_Text nextLeftPage;
     [SerializeField] private TMP_Text nextRightPage;
-
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private float playerFollowWaitTime;
+    [SerializeField] private float targetFogDensity;
+    [SerializeField] private float fogFadeInTime;
+    
     private int currentPage = -1;
 
     private void Start()
     {
+        cameraController.GotoIntroPosition(0, 1, true);
         animator.Play("closed");
+        RenderSettings.fog = false;
     }
 
     private void Update()
@@ -31,6 +37,8 @@ public class IntroManager : MonoBehaviour
 
     public void OpenFirstPage()
     {
+        cameraController.GotoIntroPosition(1, 0.2f);
+        
         string leftText = leftPageTexts[0];
         string rightText = rightPageTexts[0];
 
@@ -50,7 +58,7 @@ public class IntroManager : MonoBehaviour
         {
             OpenFirstPage();
         }
-        else
+        else if(currentPage < leftPageTexts.Count && currentPage < rightPageTexts.Count)
         {
             string leftText = leftPageTexts[currentPage];
             string rightText = rightPageTexts[currentPage];
@@ -70,5 +78,30 @@ public class IntroManager : MonoBehaviour
             
             animator.Play("flipPageText", -1, 0f);
         }
+        else
+        {
+            cameraController.GotoIntroPosition(2, 0.2f);
+            animator.Play("flipPageGame");
+            GameManager.Instance.BookManager.FlipAll();
+            StartCoroutine(WaitAndFollowPlayer());
+            StartCoroutine(FadeInFog());
+        }
+    }
+
+    private IEnumerator FadeInFog()
+    {
+        RenderSettings.fog = true;
+        for (float i = 0; i < fogFadeInTime; i += Time.deltaTime)
+        {
+            float iNorm = i / fogFadeInTime;
+            RenderSettings.fogDensity = Mathf.Lerp(0, targetFogDensity, iNorm);
+            yield return null;
+        }
+    }
+
+    private IEnumerator WaitAndFollowPlayer()
+    {
+        yield return new WaitForSeconds(playerFollowWaitTime);
+        cameraController.FollowPlayer();
     }
 }

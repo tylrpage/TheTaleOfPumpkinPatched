@@ -21,7 +21,6 @@ public class BookManager : MonoBehaviour
 
     public void FlipAll()
     {
-        bookAnimator.Play("firstPage");
         foreach (FlipWithBook flipper in _flippers)
         {
             flipper.StartFlip();
