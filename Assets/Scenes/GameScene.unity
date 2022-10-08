@@ -2489,7 +2489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326310118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.8, y: 0.5, z: -6.34}
+  m_LocalPosition: {x: 10.898, y: 0.5, z: -7.509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15019,6 +15019,7 @@ MonoBehaviour:
   - impossible
   completeFlag: 
   dialoguePages:
+  - I've been looking for you for a long time
   - It's good to finally see you again, my love
 --- !u!95 &1597672943
 Animator:
