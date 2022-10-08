@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: Scarecrow Variant
+      value: Scarecrow
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
@@ -224,8 +224,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1089532674}
-  lightRenderer: {fileID: 0}
+  lightRenderer: {fileID: 1933029641}
   fadeInTime: 2
+--- !u!114 &1751874670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745690295622461233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 1089532674}
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4745690295622461238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}
