@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private CharacterController cc;
-    [SerializeField] private Transform visual;
     
     private bool _facingRight;
     
@@ -19,14 +18,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
         Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        // Cap magnitude to 1
+        if (inputDirection.magnitude > 1)
+        {
+            inputDirection = inputDirection.normalized;
+        }
         cc.Move(inputDirection * Time.deltaTime * speed);
-
-        // if (inputDirection != Vector3.zero)
-        // {
-        //     _facingRight = inputDirection.x > 0;
-        // }
-        //
-        // Vector3 currentScale = visual.localScale;
-        // visual.localScale = new Vector3(_facingRight ? -1 : 1, currentScale.y, currentScale.z);
     }
 }
