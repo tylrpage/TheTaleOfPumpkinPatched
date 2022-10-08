@@ -53,7 +53,7 @@ MonoBehaviour:
   FlagManager: {fileID: 2237767730890352106}
   BookManager: {fileID: 6136165787673014085}
   IntroManager: {fileID: 937809260}
-  OutroManager: {fileID: 0}
+  OutroManager: {fileID: 2143223756}
 --- !u!114 &2237767730890352104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,13 +116,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   leftPageTexts:
-  - The great beyond, where souls go to rest
-  - page 3
-  - page 5
+  - 'The great beyond: where souls go to rest.'
+  - Wandering, through worlds in between.
+  - Searching, for what they have lost.
   rightPageTexts:
-  - But some restless few still linger behind
-  - page 4
-  - page 6
+  - But, some restless few still linger behind.
+  - Finishing, unfinished business.
+  - Hoping, the light guides them to rest.
   leftPage: {fileID: 0}
   rightPage: {fileID: 0}
   nextLeftPage: {fileID: 0}
