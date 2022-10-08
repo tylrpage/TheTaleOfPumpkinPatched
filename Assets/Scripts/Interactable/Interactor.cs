@@ -64,7 +64,7 @@ public class Interactor : MonoBehaviour
             }
             
             Interactable[] interactables = currentCollider.GetComponents<Interactable>();
-            Array.Sort(interactables, (x, y) => x.Priority - y.Priority);
+            Array.Sort(interactables, (x, y) => y.priority - x.priority);
             foreach (var interactable in interactables)
             {
                 if (interactable.CanInteract())

@@ -5,11 +5,9 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] private int priority;
+    [SerializeField] public int priority;
     [SerializeField] private List<string> requiredFlags;
     [SerializeField] private string completeFlag;
-    
-    public int Priority { get; private set; }
 
     public bool CanInteract()
     {
