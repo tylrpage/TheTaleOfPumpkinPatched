@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.16
+      value: -16.453
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.579
+      value: 4.578
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33,15 +33,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57,3 +57,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+--- !u!1 &902760664071274441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3227518134838544009, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+  m_PrefabInstance: {fileID: 2327572308648474944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107989304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902760664071274441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  requiredFlags: []
+  completeFlag: talkedToCowboy
+  dialoguePages:
+  - 'Well howdy there partner! '
+  - Them dang raccoons got into my tractor again and misplaced all my gears!
+  - Would'ya mind helping me fixin'er up?
+--- !u!114 &5362804101349675328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902760664071274441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  requiredFlags:
+  - fixedTractor
+  completeFlag: 
+  dialoguePages:
+  - Thank ya kindly
+  - Now where did I leave my raccoon repellent...

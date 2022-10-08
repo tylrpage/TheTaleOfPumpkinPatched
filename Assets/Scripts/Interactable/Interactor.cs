@@ -9,6 +9,7 @@ public class Interactor : MonoBehaviour
     private static readonly int WhiteEnabled = Shader.PropertyToID("_WhiteEnabled");
     
     [SerializeField] private float interactRange;
+    [SerializeField] private Tractor tractor;
 
     private Collider[] _results = new Collider[MaxColliders];
     private Interactable _recentInteractable;
@@ -39,7 +40,7 @@ public class Interactor : MonoBehaviour
             }
             
             // Interact if interact key is pressed
-            if (!GameManager.Instance.DialogueManager.IsCurrentlyTalking && Input.GetButtonDown("Interact"))
+            if (!GameManager.Instance.DialogueManager.IsCurrentlyTalking && !tractor.FixingTractor && Input.GetButtonDown("Interact"))
             {
                 nearestInteractable.Interact();
             }

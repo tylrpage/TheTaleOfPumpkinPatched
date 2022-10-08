@@ -124,6 +124,9 @@ MonoBehaviour:
   nextLeftPage: {fileID: 0}
   nextRightPage: {fileID: 0}
   cameraController: {fileID: 0}
-  playerFollowWaitTime: 2.5
+  playerFollowWaitTime: 2
   targetFogDensity: 0.03
-  fogFadeInTime: 1.5
+  fogFadeInTime: 5
+  directionalLight: {fileID: 0}
+  playingLightIntensity: 0.4
+  introLightIntensity: 0.7

@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.156
+      value: -7.966
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.713
+      value: -6.996
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -81,3 +81,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+--- !u!1 &7197194443233141167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3227518134838544009, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+  m_PrefabInstance: {fileID: 5704900270756816678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &613869640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  requiredFlags: []
+  completeFlag: 
+  dialoguePages:
+  - Hello! My name is Miriam!
+  - How are you on this fine SPOOKY night in the dark forest?
+  - Me? Well I'm just paying my respects
+  - to the late, great, but suffered a terrible fate PUMPKIN KING
+  - But something seems wrong, some squash head buried him in the wrong grave!
+  - Could you be a dear and take this map to find where he was actually buried?
