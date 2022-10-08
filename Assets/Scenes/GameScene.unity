@@ -19382,8 +19382,8 @@ MonoBehaviour:
   completeFlag: 
   dialoguePages:
   - 'Well howdy there partner! '
-  - Those dang raccoons got into my tractor again and misplaced all my gears!
-  - Would you mind helping me fix it up?
+  - Them dang raccoons got into my tractor again and misplaced all my gears!
+  - Would'ya mind helping me fixin' 'er up?
 --- !u!4 &2113325416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7078117371875040635, guid: 8a0a774ac7677a54b8c5a3ceafb358f8, type: 3}
@@ -20149,11 +20149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1089532675, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
       propertyPath: dialoguePages.Array.data[0]
-      value: My poor baby pumpkin..
+      value: My poor baby pumpkin...
       objectReference: {fileID: 0}
     - target: {fileID: 1089532675, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
       propertyPath: dialoguePages.Array.data[1]
-      value: 'Wha-?! oh hello.. '
+      value: Wha-?! oh hello...
       objectReference: {fileID: 0}
     - target: {fileID: 1089532675, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
       propertyPath: dialoguePages.Array.data[2]
