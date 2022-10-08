@@ -102,8 +102,8 @@ MonoBehaviour:
   completeFlag: 
   dialoguePages:
   - I havn't seen the patch this bright for a long time
-  - All these lumins are gonna put us right back on the map!
-  - In fact, another ghost just came in a moment ago
+  - All these lights are gonna put us right back on the map!
+  - In fact, just a few moments ago, another ghost wandered in
 --- !u!114 &7255372732356112326
 MonoBehaviour:
   m_ObjectHideFlags: 0
