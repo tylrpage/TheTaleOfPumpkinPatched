@@ -223,10 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   requiredFlags:
-  - foundBaby
+  - litMaze
   completeFlag: 
   dialoguePages:
-  - Thank you
+  - Thank you sweet child
 --- !u!114 &1089532675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +302,8 @@ MonoBehaviour:
   trigger: {fileID: 1089532674}
   lightRenderer: {fileID: 1933029641}
   fadeInTime: 5
+  light: {fileID: 0}
+  finalIntensity: 0
 --- !u!4 &4745690295622461238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}

@@ -188,14 +188,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   requiredFlags: []
-  completeFlag: 
+  completeFlag: lookingForKing
   dialoguePages:
   - Hello! My name is Miriam!
   - How are you on this fine SPOOKY night in the dark forest?
   - Me? Well I'm just paying my respects
   - to the late, great, but suffered a terrible fate PUMPKIN KING
-  - But something seems wrong, some squash head buried him in the wrong grave!
+  - But something is wrong, some squash head buried him in the wrong grave!
   - Could you be a dear and take this map to find where he was actually buried?
+--- !u!114 &5704900272496798714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 613869640}
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &5704900272496798715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dc0dab2d4963d45b74eb1c692496bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 7420803152766240883}
+  lightRenderer: {fileID: 8071773002377858164}
+  fadeInTime: 5
+  light: {fileID: 0}
+  finalIntensity: 0
 --- !u!114 &7420803152766240883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,9 +253,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 2
   requiredFlags:
-  - returnedPumpkinKing
+  - returnedTheKing
   completeFlag: litGraveyard
   dialoguePages:
-  - Thank you
+  - Oh thank you so much dearie
+--- !u!114 &8569290816730370494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  requiredFlags:
+  - foundKing
+  completeFlag: 
+  dialoguePages:
+  - Oh, excellent! You've found the king
+  - Please set him down in this kingly tombstone next to me, dearie

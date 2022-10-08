@@ -179,6 +179,8 @@ MonoBehaviour:
   trigger: {fileID: 5362804101349675328}
   lightRenderer: {fileID: 4578249431220380556}
   fadeInTime: 5
+  light: {fileID: 0}
+  finalIntensity: 0
 --- !u!114 &5362804101349675328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   requiredFlags:
-  - fixedTractor
+  - litTractor
   completeFlag: 
   dialoguePages:
   - Thank ya kindly
