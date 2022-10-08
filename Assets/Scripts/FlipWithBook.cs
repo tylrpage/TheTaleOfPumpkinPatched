@@ -37,17 +37,7 @@ public class FlipWithBook : MonoBehaviour
             StartCoroutine(FlipUp());
         }
 
-        if (!_isLeft)
-        {
-            StartCoroutine(WaitAndShow());
-        }
-        else
-        {
-            foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
-            {
-                renderer.enabled = true;
-            }
-        }
+        StartCoroutine(WaitAndShow());
     }
 
     // Update is called once per frame
