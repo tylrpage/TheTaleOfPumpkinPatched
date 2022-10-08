@@ -17,6 +17,9 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private float playerFollowWaitTime;
     [SerializeField] private float targetFogDensity;
     [SerializeField] private float fogFadeInTime;
+    [SerializeField] private Light directionalLight;
+    [SerializeField] private float playingLightIntensity;
+    [SerializeField] private float introLightIntensity;
     
     private int currentPage = -1;
 
@@ -24,7 +27,9 @@ public class IntroManager : MonoBehaviour
     {
         cameraController.GotoIntroPosition(0, 1, true);
         animator.Play("closed");
-        RenderSettings.fog = false;
+        RenderSettings.fog = true;
+        RenderSettings.fogDensity = 0.005f;
+        directionalLight.intensity = introLightIntensity;
     }
 
     private void Update()
@@ -84,17 +89,18 @@ public class IntroManager : MonoBehaviour
             animator.Play("flipPageGame");
             GameManager.Instance.BookManager.FlipAll();
             StartCoroutine(WaitAndFollowPlayer());
-            StartCoroutine(FadeInFog());
+            StartCoroutine(FadeInFogAndDimLight());
         }
     }
 
-    private IEnumerator FadeInFog()
+    private IEnumerator FadeInFogAndDimLight()
     {
         RenderSettings.fog = true;
         for (float i = 0; i < fogFadeInTime; i += Time.deltaTime)
         {
             float iNorm = i / fogFadeInTime;
-            RenderSettings.fogDensity = Mathf.Lerp(0, targetFogDensity, iNorm);
+            RenderSettings.fogDensity = Mathf.Lerp(0.005f, targetFogDensity, iNorm);
+            directionalLight.intensity = Mathf.Lerp(introLightIntensity, playingLightIntensity, iNorm);
             yield return null;
         }
     }
