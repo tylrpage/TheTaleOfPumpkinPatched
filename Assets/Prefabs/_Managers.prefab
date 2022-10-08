@@ -130,3 +130,4 @@ MonoBehaviour:
   directionalLight: {fileID: 0}
   playingLightIntensity: 0.4
   introLightIntensity: 0.7
+  player: {fileID: 0}

@@ -20,6 +20,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private Light directionalLight;
     [SerializeField] private float playingLightIntensity;
     [SerializeField] private float introLightIntensity;
+    [SerializeField] private GameObject player;
     
     private int currentPage = -1;
 
@@ -30,6 +31,7 @@ public class IntroManager : MonoBehaviour
         RenderSettings.fog = true;
         RenderSettings.fogDensity = 0.005f;
         directionalLight.intensity = introLightIntensity;
+        player.SetActive(false);
     }
 
     private void Update()
@@ -88,6 +90,7 @@ public class IntroManager : MonoBehaviour
             cameraController.GotoIntroPosition(2, 0.2f);
             animator.Play("flipPageGame");
             GameManager.Instance.BookManager.FlipAll();
+            player.SetActive(true);
             StartCoroutine(WaitAndFollowPlayer());
             StartCoroutine(FadeInFogAndDimLight());
         }
