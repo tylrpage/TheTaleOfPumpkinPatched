@@ -80,6 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1ff791f29f42328af7fec896b09326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialFlags:
+  - lookingForPumpkin
 --- !u!114 &6136165787673014085
 MonoBehaviour:
   m_ObjectHideFlags: 0
