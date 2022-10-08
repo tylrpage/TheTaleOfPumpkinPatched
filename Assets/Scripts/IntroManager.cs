@@ -23,6 +23,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private GameObject player;
     
     private int currentPage = -1;
+    private bool _finishedIntro;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class IntroManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (!_finishedIntro && Input.GetButtonDown("Interact"))
         {
             NextPage();
         }
@@ -44,7 +45,7 @@ public class IntroManager : MonoBehaviour
 
     public void OpenFirstPage()
     {
-        cameraController.GotoIntroPosition(1, 0.2f);
+        cameraController.GotoIntroPosition(1, 2f);
         
         string leftText = leftPageTexts[0];
         string rightText = rightPageTexts[0];
@@ -87,7 +88,8 @@ public class IntroManager : MonoBehaviour
         }
         else
         {
-            cameraController.GotoIntroPosition(2, 0.2f);
+            _finishedIntro = true;
+            cameraController.GotoIntroPosition(2, 2f);
             animator.Play("flipPageGame");
             GameManager.Instance.BookManager.FlipAll();
             player.SetActive(true);
