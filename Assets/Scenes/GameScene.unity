@@ -16360,6 +16360,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6815266638921753663, guid: df81a7a1747d23541943d76e98956ba6, type: 3}
   m_PrefabInstance: {fileID: 1918903138}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1933029641 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1933029641, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
+  m_PrefabInstance: {fileID: 7860582945424514038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1935684053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18594,6 +18599,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753759730}
     m_Modifications:
+    - target: {fileID: 1944600340787760311, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
+      propertyPath: lightRenderer
+      value: 
+      objectReference: {fileID: 1933029641}
     - target: {fileID: 4745690295381339893, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
       propertyPath: m_Name
       value: Scarecrow
