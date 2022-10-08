@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.423
+      value: 7.187
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.535
+      value: -7.391
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -67,5 +67,89 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: be13fc1ce7797aa4ba0433f5a01a8846, type: 2}
+    - target: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.659
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+--- !u!1 &2681669595035448931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3227518134838544009, guid: 856ac058da173ca42a42388a1723e738, type: 3}
+  m_PrefabInstance: {fileID: 719809500716167402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &97493069374630687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681669595035448931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  requiredFlags:
+  - litMaze
+  - litGraveyard
+  - litTractor
+  completeFlag: 
+  dialoguePages:
+  - I havn't seen the patch this bright for a long time
+  - All these lumins are gonna put us right back on the map!
+  - In fact, another ghost just came in a moment ago
+--- !u!114 &7255372732356112326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681669595035448931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  requiredFlags: []
+  completeFlag: 
+  dialoguePages:
+  - Don't mind the horseman
+  - He is often one to lose his head
+  - But, it's understandable why he might be grumpy
+  - The patch isn't quite what it used to be
+  - and not many travelers come by anymore
+--- !u!114 &9146172230520009003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681669595035448931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 97493069374630687}
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OutroManager, Assembly-CSharp
+        m_MethodName: PlayOutro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

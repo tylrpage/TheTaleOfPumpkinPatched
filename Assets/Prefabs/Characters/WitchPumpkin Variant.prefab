@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: WitchPumpkin
+      value: WitchPumpkin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
@@ -190,12 +190,32 @@ MonoBehaviour:
   requiredFlags: []
   completeFlag: lookingForKing
   dialoguePages:
-  - Hello! My name is Miriam!
-  - How are you on this fine SPOOKY night in the dark forest?
-  - Me? Well I'm just paying my respects
+  - Hello sweetie, I've been trying to paying my respects
   - to the late, great, but suffered a terrible fate PUMPKIN KING
   - But something is wrong, some squash head buried him in the wrong grave!
   - Could you be a dear and take this map to find where he was actually buried?
+--- !u!114 &3600559638549897861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 3
+  requiredFlags:
+  - litMaze
+  - litGraveyard
+  - litTractor
+  completeFlag: 
+  dialoguePages:
+  - Oh dearie, you lit up this whole patch!
+  - Even my gloomy little corner is as bright as bones
+  - By the way, I think the kitty was looking to talk to you
 --- !u!114 &5704900272496798714
 MonoBehaviour:
   m_ObjectHideFlags: 0

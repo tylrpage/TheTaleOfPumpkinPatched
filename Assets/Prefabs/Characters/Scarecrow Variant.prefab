@@ -123,7 +123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: Scarecrow
+      value: Scarecrow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
@@ -244,9 +244,8 @@ MonoBehaviour:
   completeFlag: 
   dialoguePages:
   - My poor baby pumpkin...
-  - Wha-?! oh hello...
-  - 'My sweet child got lost in the cornfield! '
-  - Please bring him home!
+  - My sweet child... lost in the cornfield
+  - Please bring him back to me, little soul
 --- !u!114 &1751874670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +303,28 @@ MonoBehaviour:
   fadeInTime: 5
   light: {fileID: 0}
   finalIntensity: 0
+--- !u!114 &2317488518851471554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745690295622461233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 2
+  requiredFlags:
+  - litMaze
+  - litGraveyard
+  - litTractor
+  completeFlag: 
+  dialoguePages:
+  - You've lit up the whole patch, now I'll always be able to find my child
+  - Thank you, bright soul
+  - I think the kitten was wanting to see you, little one
 --- !u!4 &4745690295622461238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}

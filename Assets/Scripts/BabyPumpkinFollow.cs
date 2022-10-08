@@ -35,6 +35,8 @@ public class BabyPumpkinFollow : MonoBehaviour
 
     private void EndFollow()
     {
+        // Only do it once
+        endTrigger.Completed -= EndFollow;
         StartCoroutine(HopOffPlayer());
     }
 

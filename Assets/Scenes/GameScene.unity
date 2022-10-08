@@ -19859,6 +19859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinCat
       objectReference: {fileID: 0}
+    - target: {fileID: 9146172230520009003, guid: 3f53b344dc7939540b826163668101a7, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2143223756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f53b344dc7939540b826163668101a7, type: 3}
 --- !u!1001 &902760662260235768

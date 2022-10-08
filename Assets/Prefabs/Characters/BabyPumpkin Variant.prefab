@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: BabyPumpkin
+      value: BabyPumpkin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
@@ -167,7 +167,7 @@ MonoBehaviour:
   endPosition: {fileID: 0}
   playerOffset: {x: 0, y: 0.58, z: -0.01}
   player: {fileID: 0}
-  travelToPlayerTime: 1.5
+  travelToPlayerTime: 0.8
   babyAnimator: {fileID: 4639982380521919004}
   babyCollider: {fileID: 4639982380230499282}
   babyTransform: {fileID: 4639982380521919005}
