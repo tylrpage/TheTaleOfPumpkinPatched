@@ -195,8 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   requiredFlags:
-  - litTractor
-  completeFlag: 
+  - fixedTractor
+  completeFlag: litTractor
   dialoguePages:
   - Thank ya kindly
   - Now where did I leave my raccoon repellent...
