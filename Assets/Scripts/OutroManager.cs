@@ -46,6 +46,7 @@ public class OutroManager : MonoBehaviour
     private IEnumerator OutroRoutine()
     {
         player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Interactor>().enabled = false;
         partner.gameObject.SetActive(true);
         yield return StartCoroutine(MovePartner());
         yield return StartCoroutine(BlushCheeks());

@@ -15,6 +15,14 @@ public class Interactor : MonoBehaviour
     private Interactable _recentInteractable;
     private static readonly int WhitePhaseOffset = Shader.PropertyToID("_WhitePhaseOffset");
 
+    private void OnDisable()
+    {
+        if (_recentInteractable != null)
+        {
+            _recentInteractable.GetComponentInChildren<Renderer>().material.SetFloat(WhiteEnabled, 0);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
