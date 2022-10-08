@@ -16,23 +16,22 @@ public class CameraController : MonoBehaviour
     private Quaternion _targetRotation;
     private bool _followingPlayer;
     private float _initialLerpSpeed;
+    private Vector3 _startPosition;
 
     private void Awake()
     {
         _initialLerpSpeed = lerpSpeed;
     }
 
-    public void GotoIntroPosition(int index, float? speed, bool instant = false)
+    public void GotoIntroPosition(int index, float duration, bool instant = false)
     {
         _followingPlayer = false;
         Transform targetTransform = introPositions[index];
+        _startPosition = transform.position;
         _targetPosition = targetTransform.position;
         _targetRotation = targetTransform.rotation;
 
-        if (speed != null)
-        {
-            lerpSpeed = (float)speed;
-        }
+        lerpSpeed = duration;
 
         if (instant)
         {
@@ -57,8 +56,17 @@ public class CameraController : MonoBehaviour
 
         float lerpSpeedInd = 1 - Mathf.Pow(lerpSpeed, Time.deltaTime);
         float lerpRotInd = 1 - Mathf.Pow(rotationSpeed, Time.deltaTime);
-        
-        Vector3 actualPosition = Vector3.Lerp(transform.position, _targetPosition, lerpSpeedInd);
+
+        Vector3 actualPosition;
+        if (_followingPlayer)
+        {
+            actualPosition = Vector3.Lerp(transform.position, _targetPosition, lerpSpeedInd);
+        }
+        else
+        {
+            float maxDistance = (_startPosition - _targetPosition).magnitude / lerpSpeed * Time.deltaTime;
+            actualPosition = Vector3.MoveTowards(transform.position, _targetPosition, maxDistance);
+        }
         Quaternion actualRotation = Quaternion.Lerp(transform.rotation, _targetRotation, lerpRotInd);
         
         transform.position = actualPosition;
