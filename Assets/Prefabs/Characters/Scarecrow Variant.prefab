@@ -223,10 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   requiredFlags:
-  - litMaze
-  completeFlag: 
+  - foundBaby
+  completeFlag: litMaze
   dialoguePages:
-  - Thank you sweet child
+  - Thank you, sweet soul
 --- !u!114 &1089532675
 MonoBehaviour:
   m_ObjectHideFlags: 0
