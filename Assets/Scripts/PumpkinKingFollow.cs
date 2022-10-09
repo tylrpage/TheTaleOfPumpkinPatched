@@ -24,11 +24,6 @@ public class PumpkinKingFollow : MonoBehaviour
         _initialPosition = kingTransform.position;
     }
 
-    private void Start()
-    {
-        kingVisual.SetActive(false);
-    }
-
     private void LateUpdate()
     {
         if (_isFollowing)
@@ -46,7 +41,6 @@ public class PumpkinKingFollow : MonoBehaviour
 
     private void StartFollow()
     {
-        kingVisual.SetActive(true);
         StartCoroutine(HopOnPlayer());
     }
 

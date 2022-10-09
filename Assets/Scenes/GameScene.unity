@@ -4636,8 +4636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The End
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4619d296dd8aaeb4c83c2486cf48fbe7, type: 2}
-  m_sharedMaterial: {fileID: 5062833257670984151, guid: 4619d296dd8aaeb4c83c2486cf48fbe7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23354,15 +23354,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6267018684312103002, guid: 52dce3b0fb1baee4a85d9b47820d55d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.251
+      value: -2.273
       objectReference: {fileID: 0}
     - target: {fileID: 6267018684312103002, guid: 52dce3b0fb1baee4a85d9b47820d55d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3518
+      value: -0.215
       objectReference: {fileID: 0}
     - target: {fileID: 6267018684312103002, guid: 52dce3b0fb1baee4a85d9b47820d55d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.204
+      value: 4.481
       objectReference: {fileID: 0}
     - target: {fileID: 6267018684312103002, guid: 52dce3b0fb1baee4a85d9b47820d55d1, type: 3}
       propertyPath: m_LocalRotation.w

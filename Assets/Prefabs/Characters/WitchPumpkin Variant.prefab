@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2425920617156884110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: WitchPumpkin
+      value: WitchPumpkin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
