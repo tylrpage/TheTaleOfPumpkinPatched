@@ -133,16 +133,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 2
+  priority: 1
   requiredFlags:
   - litMaze
   - litGraveyard
   - litTractor
   completeFlag: 
   dialoguePages:
-  - You've lit up the whole patch, now I'll always be able to find my child
-  - Thank you, bright soul
-  - I think the kitten was wanting to see you, little one
+  - Hm, this place is looking pretty nice
+  - Was...lighting me up maybe part of the plan too?
+  - ...
+  - Hello?
 --- !u!114 &4623287192847802661
 MonoBehaviour:
   m_ObjectHideFlags: 0
