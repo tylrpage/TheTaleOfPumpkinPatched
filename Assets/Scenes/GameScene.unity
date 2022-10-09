@@ -3584,8 +3584,8 @@ MonoBehaviour:
   m_text: 'To interact with something: walk up to it until it starts flashing white,
     then press SPACE'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
-  m_sharedMaterial: {fileID: 6486717682081490359, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4412,8 +4412,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The End
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4619d296dd8aaeb4c83c2486cf48fbe7, type: 2}
+  m_sharedMaterial: {fileID: 5062833257670984151, guid: 4619d296dd8aaeb4c83c2486cf48fbe7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17647,8 +17647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use WASD or Arrow keys to move
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
-  m_sharedMaterial: {fileID: 6486717682081490359, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18673,8 +18673,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Old man King Pumpkin was buried out here somewhere...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
-  m_sharedMaterial: {fileID: 6486717682081490359, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
