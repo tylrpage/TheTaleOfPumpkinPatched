@@ -21,6 +21,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private float playingLightIntensity;
     [SerializeField] private float introLightIntensity;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioSource pageTurnSource;
     
     private int currentPage = -1;
     private bool _finishedIntro;
@@ -64,10 +65,12 @@ public class IntroManager : MonoBehaviour
         currentPage++;
         if (currentPage == 0)
         {
+            pageTurnSource.Play();
             OpenFirstPage();
         }
         else if(currentPage < leftPageTexts.Count && currentPage < rightPageTexts.Count)
         {
+            pageTurnSource.Play();
             string leftText = leftPageTexts[currentPage];
             string rightText = rightPageTexts[currentPage];
             
@@ -95,6 +98,7 @@ public class IntroManager : MonoBehaviour
             
             _finishedIntro = true;
             cameraController.GotoIntroPosition(2, 2.5f);
+            GameManager.Instance.MusicManager.StartMusic(5f);
             StartCoroutine(WaitAndFlipPageGame());
             StartCoroutine(WaitAndFollowPlayer());
             StartCoroutine(FadeInFogAndDimLight());
