@@ -88,6 +88,11 @@ public class IntroManager : MonoBehaviour
         }
         else
         {
+            string oldLeftText = leftPageTexts[currentPage - 1];
+            string oldRightText = rightPageTexts[currentPage - 1];
+            leftPage.text = oldLeftText;
+            rightPage.text = oldRightText;
+            
             _finishedIntro = true;
             cameraController.GotoIntroPosition(2, 2f);
             animator.Play("flipPageGame");
