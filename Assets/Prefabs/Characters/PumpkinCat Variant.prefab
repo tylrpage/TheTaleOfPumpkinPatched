@@ -111,11 +111,14 @@ MonoBehaviour:
   - litMaze
   - litGraveyard
   - litTractor
-  completeFlag: 
+  completeFlag: readyToEnd
   dialoguePages:
   - I haven't seen the patch this bright for a long time
   - All these lights are gonna put us right back on the map!
-  - In fact, just a few moments ago, another ghost wandered in
+  - In fact, just a few moments ago, another ghost wandered in.
+  - I know a lot of us are really grateful for your help.
+  - Talk to everyone once more if you like, then talk to me
+  - when you're ready to continue
 --- !u!114 &7255372732356112326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 97493069374630687}
+  trigger: {fileID: 2800496626116659941}
   action:
     m_PersistentCalls:
       m_Calls:
@@ -165,3 +168,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2800496626116659941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681669595035448931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 2
+  requiredFlags:
+  - readyToEnd
+  completeFlag: 
+  dialoguePages:
+  - There's another ghost that just got here
+  - They've been asking all about you.
