@@ -21541,6 +21541,10 @@ PrefabInstance:
       propertyPath: walkPanel
       value: 
       objectReference: {fileID: 1556906982}
+    - target: {fileID: 1360768986243887996, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: playerInteractor
+      value: 
+      objectReference: {fileID: 326310120}
     - target: {fileID: 2237767730890352104, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
       propertyPath: dialogueText
       value: 

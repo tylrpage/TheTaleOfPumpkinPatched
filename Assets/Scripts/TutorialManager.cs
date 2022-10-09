@@ -7,7 +7,8 @@ public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private GameObject talkPanel;
     [SerializeField] private GameObject walkPanel;
-
+    [SerializeField] private Interactor playerInteractor;
+    
     private void Start()
     {
         talkPanel.SetActive(false);
@@ -22,6 +23,7 @@ public class TutorialManager : MonoBehaviour
     public void StartWalkTutorial()
     {
         walkPanel.SetActive(true);
+        playerInteractor.enabled = false;
     }
 
     private void Update()
@@ -33,6 +35,7 @@ public class TutorialManager : MonoBehaviour
         if (walkPanel.activeSelf && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
         {
             walkPanel.SetActive(false);
+            playerInteractor.enabled = true;
         }
     }
 }

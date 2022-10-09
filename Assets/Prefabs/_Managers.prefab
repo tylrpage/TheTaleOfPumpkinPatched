@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  talkingCooldown: 0.5
+  talkingCooldown: 0.8
   typingSpeed: 0.03
 --- !u!114 &2237767730890352106
 MonoBehaviour:
@@ -180,3 +180,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkPanel: {fileID: 0}
   walkPanel: {fileID: 0}
+  playerInteractor: {fileID: 0}
