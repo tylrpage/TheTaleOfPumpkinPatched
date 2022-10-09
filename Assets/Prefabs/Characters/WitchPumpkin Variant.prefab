@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: WitchPumpkin Variant
+      value: WitchPumpkin
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Layer
@@ -190,7 +190,7 @@ MonoBehaviour:
   requiredFlags: []
   completeFlag: lookingForKing
   dialoguePages:
-  - Hello sweetie, I've been trying to paying my respects
+  - Hello sweetie, I've been trying to pay my respects
   - to the late, great, but suffered a terrible fate PUMPKIN KING
   - But something is wrong, some squash head buried him in the wrong grave!
   - Could you be a dear and take this map to find where he was actually buried?
