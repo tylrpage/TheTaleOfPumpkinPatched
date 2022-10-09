@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2655634210459996073}
   - component: {fileID: 6753732164284688547}
   - component: {fileID: 1248485362997706198}
+  - component: {fileID: 4623287192847802661}
   m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
@@ -142,6 +143,34 @@ MonoBehaviour:
   - You've lit up the whole patch, now I'll always be able to find my child
   - Thank you, bright soul
   - I think the kitten was wanting to see you, little one
+--- !u!114 &4623287192847802661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160148473940080245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 6753732164284688547}
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: StartWalkTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6435852478308809327
 GameObject:
   m_ObjectHideFlags: 0

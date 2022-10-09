@@ -119,5 +119,8 @@ public class IntroManager : MonoBehaviour
     {
         yield return new WaitForSeconds(playerFollowWaitTime);
         cameraController.FollowPlayer();
+        yield return new WaitForSeconds(2f);
+        player.GetComponent<Interactor>().enabled = true;
+        GameManager.Instance.TutorialManager.StartTalkTutorial();
     }
 }

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public BookManager BookManager;
     public IntroManager IntroManager;
     public OutroManager OutroManager;
+    public TutorialManager TutorialManager;
     
     private void Awake()
     {
