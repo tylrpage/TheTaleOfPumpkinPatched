@@ -101,7 +101,7 @@ MonoBehaviour:
   LeftPage: {fileID: 0}
   RightPage: {fileID: 0}
   FlipRotation: 89
-  FlipDelay: 2
+  FlipDelay: 2.8
   RightVisableDelay: 0.4
   bookAnimator: {fileID: 0}
 --- !u!114 &937809260
@@ -130,7 +130,7 @@ MonoBehaviour:
   nextLeftPage: {fileID: 0}
   nextRightPage: {fileID: 0}
   cameraController: {fileID: 0}
-  playerFollowWaitTime: 3
+  playerFollowWaitTime: 6
   targetFogDensity: 0.03
   fogFadeInTime: 5
   directionalLight: {fileID: 0}

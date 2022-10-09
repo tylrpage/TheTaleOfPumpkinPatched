@@ -94,10 +94,8 @@ public class IntroManager : MonoBehaviour
             rightPage.text = oldRightText;
             
             _finishedIntro = true;
-            cameraController.GotoIntroPosition(2, 2f);
-            animator.Play("flipPageGame");
-            GameManager.Instance.BookManager.FlipAll();
-            player.SetActive(true);
+            cameraController.GotoIntroPosition(2, 2.5f);
+            StartCoroutine(WaitAndFlipPageGame());
             StartCoroutine(WaitAndFollowPlayer());
             StartCoroutine(FadeInFogAndDimLight());
         }
@@ -122,5 +120,13 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         player.GetComponent<Interactor>().enabled = true;
         GameManager.Instance.TutorialManager.StartTalkTutorial();
+    }
+
+    private IEnumerator WaitAndFlipPageGame()
+    {
+        yield return new WaitForSeconds(2);
+        animator.Play("flipPageGame");
+        GameManager.Instance.BookManager.FlipAll();
+        player.SetActive(true);
     }
 }
