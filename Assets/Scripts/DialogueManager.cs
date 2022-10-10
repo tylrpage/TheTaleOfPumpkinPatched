@@ -34,9 +34,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-    public void StartShowDialogue(List<string> textPages, Action completeCallback = null)
+    public void StartShowDialogue(List<string> textPages, Action completeCallback = null, bool forceAllow = false)
     {
-        if (!_canStartDialogue)
+        if (!_canStartDialogue && !forceAllow)
         {
             return;
         }
@@ -62,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            _canStartDialogue = false;
             HideDialogue();
             _completeCallback?.Invoke();
             _completeCallback = null;

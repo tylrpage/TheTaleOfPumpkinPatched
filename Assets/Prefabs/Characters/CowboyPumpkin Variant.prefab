@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3227518134610005837, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_Name
-      value: CowboyPumpkin Variant
+      value: CowboyPumpkin
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_RootOrder
@@ -222,6 +222,20 @@ MonoBehaviour:
   - Well I'll be a watermelon's uncle
   - You done lit up this whole patch!
   - Go see the kitty, I think he was lookin' for ya
+--- !u!114 &8535659400560978919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902760664071274441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b875fe6f50bfd43adeeb88f7363242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 5362804101349675328}
+  action: {fileID: 6994089411562486810}
 --- !u!4 &902760664071274446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3227518134838544014, guid: 856ac058da173ca42a42388a1723e738, type: 3}

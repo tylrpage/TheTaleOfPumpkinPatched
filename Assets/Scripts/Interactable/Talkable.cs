@@ -10,4 +10,9 @@ public class Talkable : Interactable
     {
         GameManager.Instance.DialogueManager.StartShowDialogue(dialoguePages, Complete);
     }
+
+    public void ForceInteract()
+    {
+        GameManager.Instance.DialogueManager.StartShowDialogue(dialoguePages, Complete, true);
+    }
 }
