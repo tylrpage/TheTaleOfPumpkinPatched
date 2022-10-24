@@ -30,11 +30,27 @@ public class MusicManager : MonoBehaviour
     {
         float clipLength = audioSource.clip != null ? audioSource.clip.length : 0;
         float timeToWait = clipLength - audioSource.time;
+        if (timeToWait < 0.1f)
+        {
+            timeToWait += clipLength;
+        }
+        
+        // Create a new audio source to "pre-load" the next clip
+        AudioSource newAudioSource = audioSource.gameObject.AddComponent<AudioSource>();
+        AudioClip clip = songs[newIndex];
+        newAudioSource.clip = clip;
+        // We sync up the time with the current audio source, and play it silently
+        newAudioSource.volume = 0;
+        newAudioSource.loop = true;
+        newAudioSource.time = audioSource.time;
+        newAudioSource.Play();
+        
         yield return new WaitForSeconds(timeToWait);
         
-        AudioClip clip = songs[newIndex];
-        audioSource.clip = clip;
-        audioSource.Play();
+        // When the current clip has ended, switch out the audio sources
+        newAudioSource.volume = audioSource.volume;
+        Destroy(audioSource);
+        audioSource = newAudioSource;
     }
 
     private IEnumerator Routine()
