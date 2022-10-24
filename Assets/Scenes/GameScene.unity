@@ -22489,6 +22489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753759730}
     m_Modifications:
+    - target: {fileID: 2107989318, guid: 8f73c1d4aa2f63c4c9d9696ed2cc8f1c, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2237767730845648790}
     - target: {fileID: 902760663775491597, guid: 8f73c1d4aa2f63c4c9d9696ed2cc8f1c, type: 3}
       propertyPath: m_Name
       value: CowboyPumpkin
@@ -22830,6 +22834,38 @@ PrefabInstance:
       propertyPath: playerInteractor
       value: 
       objectReference: {fileID: 326310120}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: fadeInTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 798b382d4a970e24696a446d9220b23d, type: 3}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e6dfe5d524a6be74abf4c811f2ee3713, type: 3}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b44f378eb3956bd4a98acec4fdba66bd, type: 3}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: b3cf45deb8f3d664a8e3e6b3134731fa, type: 3}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: caabdbb1d7d4dff45a28e6d503f1912a, type: 3}
+    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: songs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 777bfe7a96cb731418773c9667d0ef98, type: 3}
     - target: {fileID: 2237767730890352104, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
       propertyPath: dialogueText
       value: 
@@ -22898,6 +22934,10 @@ PrefabInstance:
       propertyPath: bookAnimator
       value: 
       objectReference: {fileID: 253007107}
+    - target: {fileID: 8078047608972364735, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
 --- !u!114 &2237767730845648789 stripped
@@ -22909,6 +22949,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b0ce713f220d5b4caa54262a3c97aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2237767730845648790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
+  m_PrefabInstance: {fileID: 2237767730845648788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866545affa960e4bae3ed5be6c6e0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3960257219877963135
@@ -23102,6 +23153,10 @@ PrefabInstance:
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1450404484}
+    - target: {fileID: 5704900272496798724, guid: ca84d78d8216d8446a4c3f190d402a4d, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2237767730845648790}
     - target: {fileID: 7197194443008698473, guid: ca84d78d8216d8446a4c3f190d402a4d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -23271,6 +23326,10 @@ PrefabInstance:
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 275071005}
+    - target: {fileID: 1751874670, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2237767730845648790}
     - target: {fileID: 4745690295381339893, guid: 5d7a48525385dc34c813f78f919581b1, type: 3}
       propertyPath: m_Name
       value: Scarecrow

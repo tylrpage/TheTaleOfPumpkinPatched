@@ -41,6 +41,7 @@ public class OutroManager : MonoBehaviour
     public void PlayOutro()
     {
         StartCoroutine(OutroRoutine());
+        GameManager.Instance.MusicManager.IncrementMusic();
     }
 
     private IEnumerator OutroRoutine()

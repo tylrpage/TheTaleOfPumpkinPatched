@@ -57,6 +57,8 @@ public class IntroManager : MonoBehaviour
         nextLeftPage.enabled = false;
         nextRightPage.enabled = false;
         
+        GameManager.Instance.MusicManager.StartMusic();
+        
         animator.Play("openBook");
     }
 
@@ -98,7 +100,7 @@ public class IntroManager : MonoBehaviour
             
             _finishedIntro = true;
             cameraController.GotoIntroPosition(2, 2.5f);
-            GameManager.Instance.MusicManager.StartMusic(5f);
+            GameManager.Instance.MusicManager.IncrementMusic();
             StartCoroutine(WaitAndFlipPageGame());
             StartCoroutine(WaitAndFollowPlayer());
             StartCoroutine(FadeInFogAndDimLight());

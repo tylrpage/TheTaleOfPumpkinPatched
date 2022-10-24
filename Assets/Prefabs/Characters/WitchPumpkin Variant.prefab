@@ -261,6 +261,20 @@ MonoBehaviour:
   fadeInTime: 5
   light: {fileID: 0}
   finalIntensity: 0
+--- !u!114 &7399631938606020339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197194443233141167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b875fe6f50bfd43adeeb88f7363242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 7420803152766240883}
+  action: {fileID: 3600559638549897861}
 --- !u!114 &7420803152766240883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +312,7 @@ MonoBehaviour:
   dialoguePages:
   - Oh, excellent! You've found the king
   - Please set him down in this kingly tombstone next to me, dearie
---- !u!114 &7399631938606020339
+--- !u!114 &5704900272496798724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,8 +321,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7197194443233141167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b875fe6f50bfd43adeeb88f7363242, type: 3}
+  m_Script: {fileID: 11500000, guid: fb4d8bf7481b3084d82f626875528f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 7420803152766240883}
-  action: {fileID: 3600559638549897861}
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: IncrementMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

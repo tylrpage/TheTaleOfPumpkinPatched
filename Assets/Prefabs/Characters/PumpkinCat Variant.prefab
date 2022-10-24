@@ -21,15 +21,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.58
+      value: 8.687
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.389
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.293
+      value: -6.752
       objectReference: {fileID: 0}
     - target: {fileID: 3227518134610005839, guid: 856ac058da173ca42a42388a1723e738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -119,6 +119,25 @@ MonoBehaviour:
   - I know a lot of us are really grateful for your help.
   - Talk to everyone once more if you like, then talk to me
   - when you're ready to continue
+--- !u!114 &2800496626116659941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681669595035448931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 2
+  requiredFlags:
+  - readyToEnd
+  completeFlag: 
+  dialoguePages:
+  - There's another ghost that just got here
+  - They've been asking all about you.
 --- !u!114 &7255372732356112326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,22 +187,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2800496626116659941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2681669595035448931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e17fa4afbd77d2429e2613f7930ba8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 2
-  requiredFlags:
-  - readyToEnd
-  completeFlag: 
-  dialoguePages:
-  - There's another ghost that just got here
-  - They've been asking all about you.
