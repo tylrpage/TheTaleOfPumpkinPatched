@@ -396,8 +396,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click on a gear then click on a peg!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
-  m_sharedMaterial: {fileID: 6486717682081490359, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2213,8 +2213,8 @@ MonoBehaviour:
 
     Press space to continue'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
-  m_sharedMaterial: {fileID: 6486717682081490359, guid: aefe790cbe483ec42b50006cee70348c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
+  m_sharedMaterial: {fileID: 6486717682081490359, guid: 8f849d5d17996d14b92eff004b1bc1b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

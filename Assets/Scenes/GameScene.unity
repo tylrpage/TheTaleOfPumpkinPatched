@@ -22834,38 +22834,6 @@ PrefabInstance:
       propertyPath: playerInteractor
       value: 
       objectReference: {fileID: 326310120}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: fadeInTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 798b382d4a970e24696a446d9220b23d, type: 3}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: e6dfe5d524a6be74abf4c811f2ee3713, type: 3}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: b44f378eb3956bd4a98acec4fdba66bd, type: 3}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: b3cf45deb8f3d664a8e3e6b3134731fa, type: 3}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: caabdbb1d7d4dff45a28e6d503f1912a, type: 3}
-    - target: {fileID: 2237767730845648791, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: songs.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 777bfe7a96cb731418773c9667d0ef98, type: 3}
     - target: {fileID: 2237767730890352104, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
       propertyPath: dialogueText
       value: 
@@ -22934,10 +22902,6 @@ PrefabInstance:
       propertyPath: bookAnimator
       value: 
       objectReference: {fileID: 253007107}
-    - target: {fileID: 8078047608972364735, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd38ae942f81594db545f536bee47a0, type: 3}
 --- !u!114 &2237767730845648789 stripped
