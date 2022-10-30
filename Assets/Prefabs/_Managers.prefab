@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -333,4 +333,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b3cf45deb8f3d664a8e3e6b3134731fa, type: 3}
   - {fileID: 8300000, guid: caabdbb1d7d4dff45a28e6d503f1912a, type: 3}
   - {fileID: 8300000, guid: 777bfe7a96cb731418773c9667d0ef98, type: 3}
-  fadeInTime: 5
+  crossFadeTime: 0.3
+  barLength: 9.6

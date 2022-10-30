@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,8 @@ public class MusicManager : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<AudioClip> songs;
-    [SerializeField] private float fadeInTime;
+    [SerializeField] private float crossFadeTime;
+    [SerializeField] private float barLength;
 
     private int _currentSongIndex;
 
@@ -15,7 +17,12 @@ public class MusicManager : MonoBehaviour
         _currentSongIndex = 0;
         audioSource.Play();
         audioSource.loop = true;
-        //StartCoroutine(Routine());
+
+        // Preload next song
+        if (songs.Count > 1)
+        {
+            songs[1].LoadAudioData();
+        }
         
         StartCoroutine(QueueSongRoutine(_currentSongIndex));
     }
@@ -28,38 +35,65 @@ public class MusicManager : MonoBehaviour
 
     private IEnumerator QueueSongRoutine(int newIndex)
     {
-        float clipLength = audioSource.clip != null ? audioSource.clip.length : 0;
-        float timeToWait = clipLength - audioSource.time;
-        if (timeToWait < 0.1f)
+        float timeToWait;
+        if (audioSource.clip == null)
         {
-            timeToWait += clipLength;
+            timeToWait = 0;
+        }
+        else
+        {
+            float sourceTime = (float)audioSource.timeSamples / audioSource.clip.frequency;
+            timeToWait = barLength - sourceTime;
+            if (timeToWait < crossFadeTime)
+            {
+                timeToWait += barLength;
+            }
+        }
+        
+        // Preload the next clip
+        if (songs.Count < newIndex + 1)
+        {
+            songs[newIndex + 1].LoadAudioData();
         }
         
         // Create a new audio source to "pre-load" the next clip
         AudioSource newAudioSource = audioSource.gameObject.AddComponent<AudioSource>();
         AudioClip clip = songs[newIndex];
         newAudioSource.clip = clip;
+        newAudioSource.playOnAwake = false;
         // We sync up the time with the current audio source, and play it silently
         newAudioSource.volume = 0;
         newAudioSource.loop = true;
-        newAudioSource.time = audioSource.time;
         newAudioSource.Play();
+
+        yield return new WaitForSeconds(timeToWait - crossFadeTime);
         
-        yield return new WaitForSeconds(timeToWait);
+        newAudioSource.timeSamples = audioSource.timeSamples;
+        if (audioSource.clip == null)
+        {
+            // Instantly transition if the audio source wasnt originally playing anything
+            newAudioSource.volume = audioSource.volume;
+            audioSource.volume = 0;
+        }
+        else
+        {
+            // Cross fade
+            float finalVolume = audioSource.volume;
+            for (float i = 0; i < crossFadeTime; i+=Time.deltaTime)
+            {
+                float norm = i / crossFadeTime;
+                newAudioSource.volume = norm * finalVolume;
+                audioSource.volume = (1 - norm) * finalVolume;
+                yield return null;
+            }
+        }
         
         // When the current clip has ended, switch out the audio sources
-        newAudioSource.volume = audioSource.volume;
+        if (audioSource.clip != null)
+        {
+            audioSource.clip.UnloadAudioData();
+        }
         Destroy(audioSource);
         audioSource = newAudioSource;
-    }
-
-    private IEnumerator Routine()
-    {
-        for (float i = 0; i < fadeInTime; i += Time.deltaTime)
-        {
-            float iNorm = i / fadeInTime;
-            audioSource.volume = iNorm;
-            yield return null;
-        }
     }
 }
